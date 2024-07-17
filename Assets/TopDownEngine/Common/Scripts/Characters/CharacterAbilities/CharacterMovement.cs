@@ -96,11 +96,6 @@ namespace MoreMountains.TopDownEngine
 		protected Vector2 _lerpedInput = Vector2.zero;
 		protected float _acceleration = 0f;
 		protected bool _walkParticlesPlaying = false;
-
-		protected const string _speedAnimationParameterName = "Speed";
-		protected const string _walkingAnimationParameterName = "Walking";
-		protected const string _idleAnimationParameterName = "Idle";
-		
 		protected const string _moveXParameterName = "MoveX";
         protected const string _moveYParameterName = "MoveY";
         protected const string _lastXParameterName = "lastX";
@@ -603,9 +598,6 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		protected override void InitializeAnimatorParameters()
 		{
-			RegisterAnimatorParameter (_speedAnimationParameterName, AnimatorControllerParameterType.Float, out _speedAnimationParameter);
-			RegisterAnimatorParameter (_walkingAnimationParameterName, AnimatorControllerParameterType.Bool, out _walkingAnimationParameter);
-			RegisterAnimatorParameter (_idleAnimationParameterName, AnimatorControllerParameterType.Bool, out _idleAnimationParameter);
 			RegisterAnimatorParameter (_moveXParameterName, AnimatorControllerParameterType.Float, out _moveXParameter);
 			RegisterAnimatorParameter (_moveYParameterName, AnimatorControllerParameterType.Float, out _moveYParameter);
 			RegisterAnimatorParameter (_lastXParameterName, AnimatorControllerParameterType.Float, out _lastXParameter);
@@ -619,16 +611,13 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public override void UpdateAnimator()
 		{
-			MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _speedAnimationParameter, Mathf.Abs(_controller.CurrentMovement.magnitude),_character._animatorParameters, _character.RunAnimatorSanityChecks);
-			MMAnimatorExtensions.UpdateAnimatorBool(_animator, _walkingAnimationParameter, (_movement.CurrentState == CharacterStates.MovementStates.Walking),_character._animatorParameters, _character.RunAnimatorSanityChecks);
-			MMAnimatorExtensions.UpdateAnimatorBool(_animator, _idleAnimationParameter, (_movement.CurrentState == CharacterStates.MovementStates.Idle),_character._animatorParameters, _character.RunAnimatorSanityChecks);
 			MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _moveXParameter, _horizontalMovement, _character._animatorParameters);
             MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _moveYParameter, _verticalMovement, _character._animatorParameters);
 			MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _MoveMagnitude, _currentInput.magnitude, _character._animatorParameters);
             // Menyimpan arah terakhir
-            if (_currentInput.magnitude > 0.2)
+            if (_lerpedInput.magnitude > 0.001)
             {
-                _lastMove = new Vector2(_horizontalMovement, _verticalMovement);
+                _lastMove = new Vector2(_lerpedInput.x, _lerpedInput.y);
             }
 
             // Mengatur parameter lastX dan lastY

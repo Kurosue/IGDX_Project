@@ -353,15 +353,15 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  Movement: 0
+  Movement: 4
   InputAuthorized: 1
   AnalogInput: 0
   ScriptDrivenInput: 0
-  WalkSpeed: 4
+  WalkSpeed: 4.5
   ShouldSetMovement: 1
   IdleThreshold: 0.05
-  Acceleration: 10
-  Deceleration: 10
+  Acceleration: 15
+  Deceleration: 20
   InterpolateMovementSpeed: 0
   WalkParticles: []
   TouchTheGroundParticles: []
