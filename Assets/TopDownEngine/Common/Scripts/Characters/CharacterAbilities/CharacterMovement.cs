@@ -88,8 +88,8 @@ namespace MoreMountains.TopDownEngine
 		public AudioClip[] TouchTheGroundSfx;
 
 		protected float _movementSpeed;
-		protected float _horizontalMovement;
-		protected float _verticalMovement;
+		public float _horizontalMovement;
+		public float _verticalMovement;
 		protected Vector3 _movementVector;
 		protected Vector2 _currentInput = Vector2.zero;
 		protected Vector2 _normalizedInput;
@@ -100,9 +100,23 @@ namespace MoreMountains.TopDownEngine
 		protected const string _speedAnimationParameterName = "Speed";
 		protected const string _walkingAnimationParameterName = "Walking";
 		protected const string _idleAnimationParameterName = "Idle";
+		
+		protected const string _moveXParameterName = "MoveX";
+        protected const string _moveYParameterName = "MoveY";
+        protected const string _lastXParameterName = "lastX";
+        protected const string _lastYParameterName = "lastY";
+		protected const string _MoveMagnitudeParameterName = "MoveMagnitude";
+	
 		protected int _speedAnimationParameter;
 		protected int _walkingAnimationParameter;
 		protected int _idleAnimationParameter;
+		protected int _moveXParameter;
+        protected int _moveYParameter;
+        protected int _lastXParameter;
+        protected int _lastYParameter;
+		protected int _MoveMagnitude;
+
+        private Vector2 _lastMove; // Menyimpan arah terakhir
 
 		/// <summary>
 		/// On Initialization, we set our movement speed to WalkSpeed.
@@ -592,9 +606,15 @@ namespace MoreMountains.TopDownEngine
 			RegisterAnimatorParameter (_speedAnimationParameterName, AnimatorControllerParameterType.Float, out _speedAnimationParameter);
 			RegisterAnimatorParameter (_walkingAnimationParameterName, AnimatorControllerParameterType.Bool, out _walkingAnimationParameter);
 			RegisterAnimatorParameter (_idleAnimationParameterName, AnimatorControllerParameterType.Bool, out _idleAnimationParameter);
+			RegisterAnimatorParameter (_moveXParameterName, AnimatorControllerParameterType.Float, out _moveXParameter);
+			RegisterAnimatorParameter (_moveYParameterName, AnimatorControllerParameterType.Float, out _moveYParameter);
+			RegisterAnimatorParameter (_lastXParameterName, AnimatorControllerParameterType.Float, out _lastXParameter);
+			RegisterAnimatorParameter (_lastYParameterName, AnimatorControllerParameterType.Float, out _lastYParameter);
+			RegisterAnimatorParameter (_MoveMagnitudeParameterName, AnimatorControllerParameterType.Float, out _MoveMagnitude);
+		
 		}
 
-		/// <summary>
+		/// <summary>_
 		/// Sends the current speed and the current value of the Walking state to the animator
 		/// </summary>
 		public override void UpdateAnimator()
@@ -602,6 +622,19 @@ namespace MoreMountains.TopDownEngine
 			MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _speedAnimationParameter, Mathf.Abs(_controller.CurrentMovement.magnitude),_character._animatorParameters, _character.RunAnimatorSanityChecks);
 			MMAnimatorExtensions.UpdateAnimatorBool(_animator, _walkingAnimationParameter, (_movement.CurrentState == CharacterStates.MovementStates.Walking),_character._animatorParameters, _character.RunAnimatorSanityChecks);
 			MMAnimatorExtensions.UpdateAnimatorBool(_animator, _idleAnimationParameter, (_movement.CurrentState == CharacterStates.MovementStates.Idle),_character._animatorParameters, _character.RunAnimatorSanityChecks);
+			MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _moveXParameter, _horizontalMovement, _character._animatorParameters);
+            MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _moveYParameter, _verticalMovement, _character._animatorParameters);
+			MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _MoveMagnitude, _currentInput.magnitude, _character._animatorParameters);
+            // Menyimpan arah terakhir
+            if (_currentInput.magnitude > 0.2)
+            {
+                _lastMove = new Vector2(_horizontalMovement, _verticalMovement);
+            }
+
+            // Mengatur parameter lastX dan lastY
+            MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _lastXParameter, _lastMove.x, _character._animatorParameters);
+            MMAnimatorExtensions.UpdateAnimatorFloat(_animator, _lastYParameter, _lastMove.y, _character._animatorParameters);
+		
 		}
 	}
 }
