@@ -81,11 +81,11 @@ public class MagicAttacks_Manager : MonoBehaviour
 
     void CastProjectile()
     {
-        GameObject castFX;
-        castFX = Instantiate(FXList_Cast[currentFX_Element], spawnOffSet.position, Quaternion.identity);
-        Destroy(castFX, 3f);
+        //GameObject castFX;
+        //castFX = Instantiate(FXList_Cast[currentFX_Element], spawnOffSet.position, Quaternion.identity);
+        //Destroy(castFX, 3f);
 
-        delayShootProjectile = 0.7f;
+        //delayShootProjectile = 0.7f;
         isCasting = true;
 
     }
