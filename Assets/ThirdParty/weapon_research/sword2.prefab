@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DroppableCombo: 1
-  DropComboDelay: 0.5
+  DropComboDelay: 0.4
   ComboInProgressAnimationParameter: ComboInProgress
   Weapons: []
   OwnerCharacterHandleWeapon: {fileID: 0}
