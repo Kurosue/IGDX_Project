@@ -152,12 +152,12 @@ TextureImporter:
       name: Sword_0
       rect:
         serializedVersion: 2
-        x: 491
-        y: 352
+        x: 489
+        y: 350
         width: 315
         height: 649
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49046436, y: 0.027933741}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
