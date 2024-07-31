@@ -105,19 +105,6 @@ namespace MoreMountains.TopDownEngine
 		/// When we grab a level complete event, we update our status, and save our progress to file
 		/// </summary>
 		/// <param name="gameEvent">Game event.</param>
-		public virtual void OnMMEvent(TopDownEngineEvent gameEvent)
-		{
-			switch (gameEvent.EventType)
-			{
-				case TopDownEngineEventTypes.LevelComplete:
-					LevelComplete ();
-					SaveProgress ();
-					break;
-				case TopDownEngineEventTypes.GameOver:
-					GameOver ();
-					break;
-			}
-		} 
 
 		/// <summary>
 		/// This method describes what happens when the player loses all lives. In this case, we reset its progress and all lives will be reset.
@@ -154,7 +141,14 @@ namespace MoreMountains.TopDownEngine
 		public void OnMMEvent(MMGameEvent gameEvent)
 		{
     		switch (gameEvent.EventName)
-    		{
+    		{	
+				case "LevelComplete":
+					LevelComplete ();
+					SaveProgress ();
+					break;
+				case "GameOver":
+					GameOver ();
+					break;
 				case "FreeingPrisoners":
 					progress.Reputation += 2;
 					break;
