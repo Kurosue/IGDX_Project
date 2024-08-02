@@ -27,12 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421979490917578}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114277323309942634
 MonoBehaviour:
@@ -65,6 +66,7 @@ MonoBehaviour:
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
   AutoDestroyWhenEmptyDelay: 1
+  PreventReloadIfAmmoEmpty: 0
   CurrentAmmoLoaded: 0
   WeaponAttachmentOffset: {x: 0, y: 0.1, z: -0.15}
   FlipWeaponOnCharacterFlip: 1
@@ -102,6 +104,7 @@ MonoBehaviour:
   WeaponStopMMFeedback: {fileID: 0}
   WeaponReloadMMFeedback: {fileID: 0}
   WeaponReloadNeededMMFeedback: {fileID: 0}
+  WeaponReloadImpossibleMMFeedback: {fileID: 0}
   InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
@@ -136,7 +139,7 @@ MonoBehaviour:
   MinimumAngle: -180
   MaximumAngle: 180
   MinimumMagnitude: 0.2
-  ReticleType: 0
+  ReticleType: 2
   Reticle: {fileID: 1373789777524232, guid: 65207112181da7b41bee2bb13af8b883, type: 3}
   ReticleDistance: 5
   ReticleHeight: 0
@@ -150,6 +153,7 @@ MonoBehaviour:
   CameraTargetMaxDistance: 5
   CameraTargetSpeed: 5
   Unrestricted3DAim: 0
+  AimCenter: 0
   ReticleMovesWithSlopes: 0
   ReticleObstacleMask:
     serializedVersion: 2
