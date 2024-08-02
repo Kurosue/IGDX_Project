@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 namespace MoreMountains.TopDownEngine
 {	
-	public class Progress
+	public class Progress 
+	{
+		public PermanentProgress PermanentProgress;
+		public DungeonProgress DungeonProgress;
+	}
+
+	public class PermanentProgress
 	{
 		// PERMANENT PROGRESS //
 		public int Reputation;
@@ -13,20 +19,22 @@ namespace MoreMountains.TopDownEngine
 		public int UndistilledKnowledge;
 
 		public int Gift; 
-		
 		public bool TwinKnivesUnlocked;
 		public bool MaxHPPlus20;
 		public bool SoulSlotPlus1;
 		public bool ManaPlus1;
 		// public NPC[] NPCList;
 		//					//
+		public bool IntroLevelCleared;
+		public bool InDungeon;
+	}
 
+	public class DungeonProgress
+	{
 		// DUNGEON PROGRESS // 
 		// public Artifact[] ArtifactList;
-		public bool IntroLevelCleared;
 		public int HP;
 		public bool CurrentWeapon;
-
 		// public Artifact[] CurrentArtifact
 		public int CurrentRoomLayout;
 		public int CurrentRoomNumber;
@@ -150,30 +158,33 @@ namespace MoreMountains.TopDownEngine
 					GameOver ();
 					break;
 				case "FreeingPrisoners":
-					progress.Reputation += 2;
+					progress.PermanentProgress.Reputation += 2;
 					break;
 				case "GettingBook":
-					progress.UndistilledKnowledge += 1;
+					progress.PermanentProgress.UndistilledKnowledge += 1;
 					break;
 				case "GettingGift":
-					progress.Gift += 1;
+					progress.PermanentProgress.Gift += 1;
 					break;
 				case "BuyingTwinKnives":
-					progress.TwinKnivesUnlocked = true;
+					progress.PermanentProgress.TwinKnivesUnlocked = true;
 					break;
 				case "UpgradeMaxHP":
-					progress.MaxHPPlus20 = true;
+					progress.PermanentProgress.MaxHPPlus20 = true;
 					break;
 				case "UpgradingSoulSlot":
+					progress.PermanentProgress.SoulSlotPlus1 = true;
+					break;
 				case "UpgradingManaCapacity":
+					progress.PermanentProgress.ManaPlus1 = true; 
+					break;
 				case "ClearingIntroLevel":
-					progress.TwinKnivesUnlocked = true;
+					progress.PermanentProgress.TwinKnivesUnlocked = true;
 					break;
 				default:
 					// Handle unexpected cases if necessary
 					break;
     		}
-
 		}
 	}
 }
