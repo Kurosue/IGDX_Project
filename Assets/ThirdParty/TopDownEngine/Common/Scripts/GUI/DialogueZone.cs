@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using MoreMountains.Tools;
-using System;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -91,11 +92,13 @@ namespace MoreMountains.TopDownEngine
 		[Tooltip("the dialogue lines")]
 		public DialogueElement[] Dialogue;
 
+		public int CurrentIndex;
+
+
 		/// private variables
 		protected DialogueBox _dialogueBox;
 		protected bool _activated = false;
 		protected bool _playing = false;
-		protected int _currentIndex;
 		protected bool _activable = true;
 		protected WaitForSeconds _transitionTimeWFS;
 		protected WaitForSeconds _messageDurationWFS;
@@ -107,7 +110,7 @@ namespace MoreMountains.TopDownEngine
 		protected override void OnEnable()
 		{
 			base.OnEnable();
-			_currentIndex = 0;
+			CurrentIndex = 0;
 			_transitionTimeWFS = new WaitForSeconds(TransitionTime);
 			_messageDurationWFS = new WaitForSeconds(MessageDuration);
 			_inactiveTimeWFS = new WaitForSeconds(InactiveTime);
@@ -231,7 +234,7 @@ namespace MoreMountains.TopDownEngine
 				yield break;
 			}
 			// if this is not the first message
-			if (_currentIndex != 0)
+			if (CurrentIndex != 0)
 			{
 				// we turn the message off
 				_dialogueBox.FadeOut(FadeDuration);
@@ -239,9 +242,9 @@ namespace MoreMountains.TopDownEngine
 				yield return _transitionTimeWFS;
 			}
 			// if we've reached the last dialogue line, we exit
-			if (_currentIndex >= Dialogue.Length)
+			if (CurrentIndex >= Dialogue.Length)
 			{
-				_currentIndex = 0;
+				CurrentIndex = 0;
 				Destroy(_dialogueBox.gameObject);
 				EnableCollider(false);
 				// we set activated to true as the dialogue zone has now been turned on		
@@ -276,10 +279,10 @@ namespace MoreMountains.TopDownEngine
 				// every dialogue box starts with it fading in
 				_dialogueBox.FadeIn(FadeDuration);
 				// then we set the box's text with the current dialogue
-				_dialogueBox.DialogueText.text = Dialogue[_currentIndex].DialogueLine;
+				_dialogueBox.DialogueText.text = Dialogue[CurrentIndex].DialogueLine;
 			}
 
-			_currentIndex++;
+			CurrentIndex++;
 
 			// if the zone is not button handled, we start a coroutine to autoplay the next dialogue
 			if (!ButtonHandled)
@@ -308,7 +311,7 @@ namespace MoreMountains.TopDownEngine
 			EnableCollider(true);
 			_activable = true;
 			_playing = false;
-			_currentIndex = 0;
+			CurrentIndex = 0;
 			_promptHiddenForever = false;
 
 			if (AlwaysShowPrompt)
