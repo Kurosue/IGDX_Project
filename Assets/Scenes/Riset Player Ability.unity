@@ -2011,7 +2011,7 @@ PrefabInstance:
     - target: {fileID: 6557771511088024018, guid: adc42afe9d543d642a5d64d2ba247615,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6557771511088024018, guid: adc42afe9d543d642a5d64d2ba247615,
         type: 3}
@@ -2263,8 +2263,7 @@ PrefabInstance:
       propertyPath: DashCurve.m_Curve.Array.data[2].tangentMode
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6557771511088024018, guid: adc42afe9d543d642a5d64d2ba247615, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 617432560063008651, guid: adc42afe9d543d642a5d64d2ba247615,
@@ -2735,7 +2734,7 @@ Transform:
   m_GameObject: {fileID: 1813388885}
   serializedVersion: 2
   m_LocalRotation: {x: -0.76843923, y: -0.46936944, z: 0.42756596, w: -0.07988001}
-  m_LocalPosition: {x: 1.54, y: -1.67, z: -0.1}
+  m_LocalPosition: {x: 1.74, y: -1.88, z: -0.1}
   m_LocalScale: {x: 9.504114, y: 9.504114, z: 9.504114}
   m_ConstrainProportionsScale: 0
   m_Children: []
