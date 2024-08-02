@@ -768,7 +768,7 @@ MonoBehaviour:
   Flipped: 0
   MeleeDamageAreaMode: 0
   DamageAreaShape: 1
-  AreaOffset: {x: 6.91, y: 0.35, z: 0}
+  AreaOffset: {x: 0.54, y: 0.01, z: 0}
   AreaSize: {x: 1, y: 1, z: 0}
   TriggerFilter: 195
   HitDamageableFeedback: {fileID: 0}
@@ -862,7 +862,7 @@ MonoBehaviour:
   Flipped: 0
   MeleeDamageAreaMode: 0
   DamageAreaShape: 1
-  AreaOffset: {x: 0.2, y: 0.35, z: 0}
+  AreaOffset: {x: 0.54, y: 0.01, z: 0}
   AreaSize: {x: 1, y: 1, z: 0}
   TriggerFilter: 195
   HitDamageableFeedback: {fileID: 0}
@@ -956,7 +956,7 @@ MonoBehaviour:
   Flipped: 0
   MeleeDamageAreaMode: 0
   DamageAreaShape: 1
-  AreaOffset: {x: 0.2, y: 0.35, z: 0}
+  AreaOffset: {x: 0.54, y: 0.01, z: 0}
   AreaSize: {x: 1, y: 1, z: 0}
   TriggerFilter: 195
   HitDamageableFeedback: {fileID: 0}
