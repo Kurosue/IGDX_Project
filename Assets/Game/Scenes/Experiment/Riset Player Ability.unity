@@ -521,7 +521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383485155}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: weapon_transform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1399,6 +1399,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 404203149305276053, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 735515751440232415, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 996477426831308729, guid: 59208cfadf5ce1b4d88ea21914707a71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1449,11 +1459,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1028186584221222275, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1239692079788639831, guid: 59208cfadf5ce1b4d88ea21914707a71,
         type: 3}
       propertyPath: CharacterHealth
       value: 
       objectReference: {fileID: 1275730579}
+    - target: {fileID: 1670658069536654996, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186323865233178127, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462749246508261208, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2482593181136266647, guid: 59208cfadf5ce1b4d88ea21914707a71,
         type: 3}
       propertyPath: WalkParticles.Array.size
@@ -1465,11 +1495,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1896888374770916785, guid: 86df103155aea36459c2a06e25d2bc13,
         type: 3}
+    - target: {fileID: 3126986688336225761, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3400728165273008689, guid: 59208cfadf5ce1b4d88ea21914707a71,
         type: 3}
       propertyPath: Model
       value: 
       objectReference: {fileID: 1275730576}
+    - target: {fileID: 3617308206545496832, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636928194467277999, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5338154257517013674, guid: 59208cfadf5ce1b4d88ea21914707a71,
         type: 3}
       propertyPath: Feedbacks.Array.size
@@ -1505,6 +1550,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500489333294435556, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534350250187071314, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8272604098232756100, guid: 59208cfadf5ce1b4d88ea21914707a71,
         type: 3}
@@ -2043,8 +2098,8 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   SortingLayerName: UI
-  Delay: 0.5
-  LerpFrontBar: 1
+  Delay: 0
+  LerpFrontBar: 0
   LerpFrontBarSpeed: 15
   LerpDelayedBar: 1
   LerpDelayedBarSpeed: 15
@@ -2102,7 +2157,7 @@ MonoBehaviour:
   Model: {fileID: 1317755741}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 10
+  InitialHealth: 100
   MaximumHealth: 100
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -2111,7 +2166,7 @@ MonoBehaviour:
   PreventTakeSelfDamage: 0
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
-  KnockbackForceMultiplier: 1
+  KnockbackForceMultiplier: 0.5
   DestroyOnDeath: 1
   DelayBeforeDestruction: 0
   PointsWhenDestroyed: 0
@@ -2730,7 +2785,7 @@ Transform:
   m_GameObject: {fileID: 1393454838}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0053083296, y: -0, z: -0, w: 0.99998593}
-  m_LocalPosition: {x: -0.8, y: 0.06, z: -3.28}
+  m_LocalPosition: {x: 5.05, y: 0.06, z: -3.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2783,7 +2838,7 @@ MonoBehaviour:
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
-  ImmuneToKnockback: 1
+  ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 0.5
   DestroyOnDeath: 1
@@ -3302,12 +3357,12 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   SortingLayerName: UI
   Delay: 0
-  LerpFrontBar: 1
+  LerpFrontBar: 0
   LerpFrontBarSpeed: 15
-  LerpDelayedBar: 1
+  LerpDelayedBar: 0
   LerpDelayedBarSpeed: 15
   BumpScaleOnChange: 1
-  BumpDuration: 0.2
+  BumpDuration: 0
   BumpAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -3332,7 +3387,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  FollowTargetMode: 2
+  FollowTargetMode: 0
   NestDrawnHealthBar: 0
   Billboard: 0
   InstantiatedOnDeath: {fileID: 0}
@@ -4093,8 +4148,8 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   SortingLayerName: UI
-  Delay: 0.5
-  LerpFrontBar: 1
+  Delay: 0
+  LerpFrontBar: 0
   LerpFrontBarSpeed: 15
   LerpDelayedBar: 1
   LerpDelayedBarSpeed: 15
@@ -4152,7 +4207,7 @@ MonoBehaviour:
   Model: {fileID: 1970809351}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 10
+  InitialHealth: 100
   MaximumHealth: 100
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -4161,7 +4216,7 @@ MonoBehaviour:
   PreventTakeSelfDamage: 0
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
-  KnockbackForceMultiplier: 1
+  KnockbackForceMultiplier: 0.5
   DestroyOnDeath: 1
   DelayBeforeDestruction: 0
   PointsWhenDestroyed: 0
