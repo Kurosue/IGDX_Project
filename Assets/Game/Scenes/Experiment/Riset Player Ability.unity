@@ -142,6 +142,12 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_SortAtRoot: 0
+--- !u!4 &90364723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617432560063008651, guid: 59208cfadf5ce1b4d88ea21914707a71,
+    type: 3}
+  m_PrefabInstance: {fileID: 948302322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &105135216
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +511,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1940791665}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &383485154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383485155}
+  m_Layer: 0
+  m_Name: weapon_transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &383485155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383485154}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.72, y: -1.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 90364723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &598334956
 GameObject:
@@ -1452,8 +1489,13 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialWeapon
       value: 
-      objectReference: {fileID: 4998408202557398714, guid: 0ab5f08ec0d4b33419ddc314507ed511,
+      objectReference: {fileID: 7620949456198999406, guid: 7b78cb5081ca93649b50b0bc8e8eaead,
         type: 3}
+    - target: {fileID: 5952197046446355764, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      propertyPath: WeaponAttachment
+      value: 
+      objectReference: {fileID: 383485155}
     - target: {fileID: 6557771511088024018, guid: 59208cfadf5ce1b4d88ea21914707a71,
         type: 3}
       propertyPath: FacingMode
@@ -1516,7 +1558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 617432560063008651, guid: 59208cfadf5ce1b4d88ea21914707a71,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 383485155}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2186323865233178127, guid: 59208cfadf5ce1b4d88ea21914707a71,
         type: 3}
@@ -3255,7 +3301,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   SortingLayerName: UI
-  Delay: 0.2
+  Delay: 0
   LerpFrontBar: 1
   LerpFrontBarSpeed: 15
   LerpDelayedBar: 1
