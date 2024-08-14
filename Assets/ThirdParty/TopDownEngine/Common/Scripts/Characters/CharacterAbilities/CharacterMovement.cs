@@ -74,7 +74,9 @@ namespace MoreMountains.TopDownEngine
 		public Stack<float> ContextSpeedStack = new Stack<float>();
 		public virtual float ContextSpeedMultiplier => ContextSpeedStack.Count > 0 ? ContextSpeedStack.Peek() : 1;
 
-		[Header("Walk Feedback")]
+        public object CurrentDirection { get; set; }
+
+        [Header("Walk Feedback")]
 		/// the particles to trigger while walking
 		[Tooltip("the particles to trigger while walking")]
 		public ParticleSystem[] WalkParticles;

@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Game/Level/Scenes/MainMenu.unity
+    guid: 593592a1c9e21b44a95132894b0584c4
+  - enabled: 1
+    path: Assets/Game/Level/Scenes/AirshipPrototype.unity
+    guid: df6f74aee0d238046a22d800ea501071
+  - enabled: 1
+    path: Assets/Game/Level/Scenes/BelowDeck.unity
+    guid: 267612701f343a74b9b10e970ffb6c1d
+  - enabled: 1
+    path: Assets/Game/Level/Scenes/CaptainCabin.unity
+    guid: 631672ab37d446d4fae2a8920c72d1dc
+  - enabled: 1
+    path: Assets/Game/Level/Scenes/DungeonRoom.unity
+    guid: 6c85fca4ab45a4744af284ebb2f75fe5
+  - enabled: 1
+    path: Assets/Game/Level/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
     path: Assets/ThirdParty/TopDownEngine/Demos/StartScreen/StartScreen.unity
     guid: 52360e1567e3fee418407abdfd132d73
   - enabled: 1

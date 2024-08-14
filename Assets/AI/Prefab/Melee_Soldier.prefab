@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 9022531395081677163}
   - component: {fileID: 3865839086860060305}
   m_Layer: 13
-  m_Name: EnemyMelee 1
+  m_Name: Melee_Soldier
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 162322256501480332, guid: 0edcf3491ed22684f8dff4dc15bb64eb,
+  InitialWeapon: {fileID: 162322256501480332, guid: 7e836e5a311637945bfa210967eb277e,
     type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
