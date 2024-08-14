@@ -19,13 +19,20 @@ public class AIDash : AIAction
         _character = this.gameObject.GetComponent<Character>();
         _characterMovement = _character?.FindAbility<CharacterMovement>();
         _brain = this.gameObject.GetComponentInParent<AIBrain>(); // Add this line
-        _target = _brain.Target;
     }
 
     public override void PerformAction()
     {
+    if (_brain.Target != null)
+    {
+        _target = _brain.Target;
         LockOntoTarget();
         Dash();
+    }
+    else
+    {
+        Debug.LogWarning("No target assigned to AIBrain.");
+    }
     }
 
     protected void LockOntoTarget()

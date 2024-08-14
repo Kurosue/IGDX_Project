@@ -75,61 +75,59 @@ namespace MoreMountains.TopDownEngine
 		/// <returns></returns>
 		protected virtual bool DetectTarget()
 		{
-			// we check if there's a need to detect a new target
 			if (Time.time - _lastTargetCheckTimestamp < TargetCheckFrequency)
 			{
 				return _lastReturnValue;
 			}
-			_potentialTargets.Clear();
 
+			_potentialTargets.Clear();
 			_lastTargetCheckTimestamp = Time.time;
 			_raycastOrigin = _collider.bounds.center + DetectionOriginOffset / 2;
-			int numberOfCollidersFound = Physics.OverlapSphereNonAlloc(_raycastOrigin, Radius, _hits, TargetLayerMask);
 
-			// if there are no targets around, we exit
+			int numberOfCollidersFound = Physics.OverlapSphereNonAlloc(_raycastOrigin, Radius, _hits, TargetLayerMask);
+			Debug.Log("Number of colliders found: " + numberOfCollidersFound);
+
 			if (numberOfCollidersFound == 0)
 			{
 				_lastReturnValue = false;
 				return false;
 			}
-            
-			// we go through each collider found
-			int min = Mathf.Min(OverlapMaximum, numberOfCollidersFound);
-			for (int i = 0; i < min; i++)
+
+			for (int i = 0; i < Mathf.Min(OverlapMaximum, numberOfCollidersFound); i++)
 			{
 				if (_hits[i] == null)
 				{
 					continue;
 				}
-                
-				if (!CanTargetSelf)
+
+				Debug.Log("Found target: " + _hits[i].gameObject.name);
+
+				if (!CanTargetSelf && (_hits[i].gameObject == _brain.Owner || _hits[i].transform.IsChildOf(this.transform)))
 				{
-					if ((_hits[i].gameObject == _brain.Owner) || (_hits[i].transform.IsChildOf(this.transform)))
-					{
-						continue;
-					}    
+					continue;
 				}
-                
+
 				_potentialTargets.Add(_hits[i].gameObject.transform);
 			}
-            
-			// we sort our targets by distance
-			_potentialTargets.Sort(delegate(Transform a, Transform b)
-			{return Vector3.Distance(this.transform.position,a.transform.position)
-				.CompareTo(
-					Vector3.Distance(this.transform.position,b.transform.position) );
-			});
-            
-			// we return the first unobscured target
+
+			_potentialTargets.Sort((a, b) => Vector3.Distance(this.transform.position, a.transform.position)
+				.CompareTo(Vector3.Distance(this.transform.position, b.transform.position)));
+
 			foreach (Transform t in _potentialTargets)
 			{
 				_raycastDirection = t.position - _raycastOrigin;
 				RaycastHit hit = MMDebug.Raycast3D(_raycastOrigin, _raycastDirection, _raycastDirection.magnitude, ObstacleMask.value, Color.yellow, true);
+
 				if (hit.collider == null)
 				{
+					Debug.Log("Target detected: " + t.name);
 					_brain.Target = t;
 					_lastReturnValue = true;
 					return true;
+				}
+				else
+				{
+					Debug.Log("Obstacle detected between AI and target.");
 				}
 			}
 
