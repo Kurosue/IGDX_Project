@@ -23,16 +23,9 @@ public class AIDash : AIAction
 
     public override void PerformAction()
     {
-    if (_brain.Target != null)
-    {
         _target = _brain.Target;
         LockOntoTarget();
         Dash();
-    }
-    else
-    {
-        Debug.LogWarning("No target assigned to AIBrain.");
-    }
     }
 
     protected void LockOntoTarget()
