@@ -85,7 +85,6 @@ namespace MoreMountains.TopDownEngine
 			_raycastOrigin = _collider.bounds.center + DetectionOriginOffset / 2;
 
 			int numberOfCollidersFound = Physics.OverlapSphereNonAlloc(_raycastOrigin, Radius, _hits, TargetLayerMask);
-			Debug.Log("Number of colliders found: " + numberOfCollidersFound);
 
 			if (numberOfCollidersFound == 0)
 			{
@@ -100,7 +99,6 @@ namespace MoreMountains.TopDownEngine
 					continue;
 				}
 
-				Debug.Log("Found target: " + _hits[i].gameObject.name);
 
 				if (!CanTargetSelf && (_hits[i].gameObject == _brain.Owner || _hits[i].transform.IsChildOf(this.transform)))
 				{
@@ -120,14 +118,9 @@ namespace MoreMountains.TopDownEngine
 
 				if (hit.collider == null)
 				{
-					Debug.Log("Target detected: " + t.name);
 					_brain.Target = t;
 					_lastReturnValue = true;
 					return true;
-				}
-				else
-				{
-					Debug.Log("Obstacle detected between AI and target.");
 				}
 			}
 

@@ -113,7 +113,6 @@ namespace MoreMountains.TopDownEngine
 			{
 				return;
 			}
-			Debug.Log(_brain.Target);
 			if (TargetHandleWeaponAbility.CurrentWeapon != null)
 			{
 				if (_weaponAim == null)

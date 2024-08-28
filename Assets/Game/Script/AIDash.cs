@@ -27,7 +27,6 @@ public class AIDash : AIAction
         LockOntoTarget();
         Dash();
     }
-
     protected void LockOntoTarget()
     {
         Vector3 _targetPosition = _target.position;
@@ -36,11 +35,7 @@ public class AIDash : AIAction
 
     protected void Dash()
     {
-        // Calculate the destination based on the locked target position
-        Vector3 destination = this.transform.position + _dashDirection * DashDistance;
-
-        // Dash towards the destination
-        StartCoroutine(DashCoroutine(destination));
+        StartCoroutine(DashCoroutine(_dashDirection));
     }
 
     protected IEnumerator DashCoroutine(Vector3 destination)
