@@ -7,14 +7,16 @@ public class GSGameManager : MonoBehaviour
 {
     public GameObject currencyPrefab;
     public GameObject hpPrefab;
-    public GameObject soulPrefab;
+    public GameObject soulPickupPrefab;
     public Transform rewardSpawnPoint;
+    private GameObject _soulReward;
     private int _currentLevel;
     private int _levelCode;
     private List<int> _levelsAccomplished;
     private int _enemiesLeft;
     private string _reward;
     private int enemiesCount = 3;
+    private int currency = 0;
     public static event Action OnLevelCleared;
     public string folderPath = "Prefabs";
 
@@ -29,12 +31,18 @@ public class GSGameManager : MonoBehaviour
     {
         Enemy.OnEnemyKilled += HandleEnemyKilled;
         SoulPickup.OnRewardPickedUp += CreateDoors;
+        MoneyPickup.OnRewardPickedUp += CreateDoors;
+        HealthPickup.OnRewardPickedUp += CreateDoors;
+        MoneyPickup.OnMoneyPickedUp += IncreaseMoney;
     }
 
     void OnDisable()
     {
         Enemy.OnEnemyKilled -= HandleEnemyKilled;
         SoulPickup.OnRewardPickedUp -= CreateDoors;
+        MoneyPickup.OnRewardPickedUp -= CreateDoors;
+        HealthPickup.OnRewardPickedUp -= CreateDoors;
+        MoneyPickup.OnMoneyPickedUp -= IncreaseMoney;
     }
 
     void StartLevel()
@@ -59,6 +67,11 @@ public class GSGameManager : MonoBehaviour
         OnLevelCleared?.Invoke();
     }
 
+    void CreateDoors()
+    {
+        
+    }
+
     void SpawnReward() 
     {
         GameObject rewardPrefab = null;
@@ -66,36 +79,31 @@ public class GSGameManager : MonoBehaviour
         if (_reward == "Currency") 
         {
             rewardPrefab = currencyPrefab;
+            Instantiate(currencyPrefab, rewardSpawnPoint.position, rewardSpawnPoint.rotation);
         }
         else if (_reward == "HP") 
         {
             rewardPrefab = hpPrefab;
+            Instantiate(hpPrefab, rewardSpawnPoint.position, rewardSpawnPoint.rotation);
         }
         else if (_reward == "Soul") 
         {
-            rewardPrefab = selectSoulPrefab();
-        }
+            _soulReward = Instantiate(soulPickupPrefab, rewardSpawnPoint.position, rewardSpawnPoint.rotation);
+            _soulReward.GetComponent<SoulPickup>().soul = selectSoul();
 
-        if (rewardPrefab != null && rewardSpawnPoint != null)
-        {
-            Instantiate(rewardPrefab, rewardSpawnPoint.position, rewardSpawnPoint.rotation);
-        }
-        else
-        {
-            Debug.LogWarning("Reward prefab or spawn point is missing!");
         }
     }
 
-    GameObject selectSoulPrefab() 
+    Soul selectSoul() 
     {
-        GameObject[] prefabs = Resources.LoadAll<GameObject>(folderPath);
-        GameObject selectedPrefab = prefabs[UnityEngine.Random.Range(0, prefabs.Length)];
-        return selectedPrefab;
+        Soul[] soulList = Resources.LoadAll<Soul>(folderPath);
+        Soul selectedSoul = soulList[UnityEngine.Random.Range(0, soulList.Length)];
+        return selectedSoul;
     }
 
-    void CreateDoors() 
+    void IncreaseMoney()
     {
-        // Add logic to create doors after the level is cleared
+        currency += 5;
     }
 
     void FinishLevel() 

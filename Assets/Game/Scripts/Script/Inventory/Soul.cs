@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Soul : MonoBehaviour
+public abstract class Soul : ScriptableObject
 {
     // The slot this armor belongs to
     public GSInventory.SoulSlot Slot { get; protected set; }

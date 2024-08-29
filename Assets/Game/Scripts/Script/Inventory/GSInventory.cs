@@ -4,9 +4,9 @@ using UnityEngine;
 public class GSInventory : MonoBehaviour
 {
     // Armor slots
-    private AttackSoul attackSoulSlot;
-    private DefenseSoul defenseSoulSlot;
-    private EndureSoul endureSoulSlot;
+    private Soul attackSoulSlot;
+    private Soul defenseSoulSlot;
+    private Soul endureSoulSlot;
 
     // Enum to represent armor slots
     public enum SoulSlot
@@ -26,7 +26,7 @@ public class GSInventory : MonoBehaviour
                 {
                     attackSoulSlot.OnDrop();
                 }
-                attackSoulSlot = item as AttackSoul;
+                attackSoulSlot = item;
                 attackSoulSlot?.OnEquip();
                 break;
 
@@ -35,7 +35,7 @@ public class GSInventory : MonoBehaviour
                 {
                     defenseSoulSlot.OnDrop();
                 }
-                defenseSoulSlot = item as DefenseSoul;
+                defenseSoulSlot = item;
                 defenseSoulSlot?.OnEquip();
                 break;
 
@@ -44,7 +44,7 @@ public class GSInventory : MonoBehaviour
                 {
                     endureSoulSlot.OnDrop(); // Drop the current leggings
                 }
-                endureSoulSlot = item as EndureSoul;
+                endureSoulSlot = item;
                 endureSoulSlot?.OnEquip(); // Equip the new leggings
                 break;
 

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Game/Prefabs.meta
 guid: 3adcbf58237b8c444ae88850777a2003
+=======
+guid: 59898eedfdf507d4fac26e8eaa77fb92
+>>>>>>> Stashed changes:Assets/Game/Level/Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
