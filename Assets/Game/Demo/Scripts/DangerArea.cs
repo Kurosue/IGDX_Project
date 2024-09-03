@@ -13,6 +13,8 @@ public class DangerArea : MonoBehaviour
         if (other.CompareTag("Player")) {
             // Invoke the event if a player enters the DangerArea
             OnAreaEntered?.Invoke();
+            Destroy(gameObject);
         }
     }
+    
 }
