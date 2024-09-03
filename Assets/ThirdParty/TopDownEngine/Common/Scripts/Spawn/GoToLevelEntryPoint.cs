@@ -12,6 +12,7 @@ namespace MoreMountains.TopDownEngine
 	[AddComponentMenu("TopDown Engine/Spawn/GoToLevelEntryPoint")]
 	public class GoToLevelEntryPoint : FinishLevel 
 	{
+
 		[Space(10)]
 		[Header("Points of Entry")]
 

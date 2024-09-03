@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using MoreMountains.Tools;
+using PlasticGui.WebApi.Responses;
 
 namespace MoreMountains.TopDownEngine
 {	
@@ -14,7 +15,6 @@ namespace MoreMountains.TopDownEngine
 		/// the exact name of the level to transition to 
 		[Tooltip("the exact name of the level to transition to ")]
 		public string LevelName;
-
 		/// <summary>
 		/// When the button is pressed we start the dialogue
 		/// </summary>
@@ -33,6 +33,11 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public virtual void GoToNextLevel()
 		{
+			Health Player = GameObject.FindWithTag("Player").GetComponent<Health>();
+			if ( Player != null)
+			{
+					PlayerPrefs.SetFloat("Health", Player.CurrentHealth);
+			}
 			if (LevelManager.HasInstance)
 			{
 				LevelManager.Instance.GotoLevel(LevelName);

@@ -210,6 +210,7 @@ namespace MoreMountains.TopDownEngine
 
 				if (GameManager.Instance.PersistentCharacter != null)
 				{
+					Debug.Log("Hello");
 					Players.Add(GameManager.Instance.PersistentCharacter);
 					return;
 				}

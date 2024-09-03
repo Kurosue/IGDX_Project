@@ -337,6 +337,11 @@ PrefabInstance:
       propertyPath: InitialHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5730455513835336739, guid: e8d5edd7419a07b45a9cc4910dbacd41,
+        type: 3}
+      propertyPath: ResetHealthOnEnable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6773555651598858065, guid: e8d5edd7419a07b45a9cc4910dbacd41,
         type: 3}
       propertyPath: DashDistance
@@ -446,6 +451,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2041277751447254062}
+    - targetCorrespondingSourceObject: {fileID: 7388597903876368885, guid: e8d5edd7419a07b45a9cc4910dbacd41,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5175996768791550546}
   m_SourcePrefab: {fileID: 100100000, guid: e8d5edd7419a07b45a9cc4910dbacd41, type: 3}
 --- !u!4 &2559894621271332190 stripped
 Transform:
@@ -506,6 +515,27 @@ MonoBehaviour:
   AbsoluteThresholdWeapon: 0.5
   CurrentFacingDirection: 1
   IsFacingRight: 1
+--- !u!114 &5175996768791550546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277905788761209241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1c0fc1f870c9e4b908bfb73e021bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BlockingWeaponStates: 
 --- !u!1001 &805291599484968200
 PrefabInstance:
   m_ObjectHideFlags: 0
