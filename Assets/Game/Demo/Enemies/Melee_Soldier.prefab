@@ -129,8 +129,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 0.7
-  m_Radius: 0.26
+  m_Height: 1.7
+  m_Radius: 0.29
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -440,8 +440,8 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 100
-  MaximumHealth: 100
+  InitialHealth: 40
+  MaximumHealth: 40
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
@@ -937,17 +937,17 @@ PrefabInstance:
     - target: {fileID: 1269217180030437327, guid: 19729253e5aba3c48b385aefce87dd6d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.85527843
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1269217180030437327, guid: 19729253e5aba3c48b385aefce87dd6d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5181688
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1269217180030437327, guid: 19729253e5aba3c48b385aefce87dd6d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 62.419
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1269217180030437327, guid: 19729253e5aba3c48b385aefce87dd6d,
         type: 3}

@@ -414,10 +414,10 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 6372735838508780227}
         DebugActive: 0
-        Mode: 0
-        ObjectPoolSize: 5
+        Mode: 2
+        ObjectPoolSize: 20
         MutualizePools: 0
-        ParentTransform: {fileID: 0}
+        ParentTransform: {fileID: 4310667231538911136}
         CachedRecycle: 1
         ParticlesPrefab: {fileID: 6498568000327061605, guid: 102ac58d070a8b8409ed371332a69be3,
           type: 3}
@@ -430,7 +430,7 @@ MonoBehaviour:
         TargetWorldPosition: {x: 0, y: 0, z: 0}
         Offset: {x: 0, y: 0, z: 0}
         NestParticles: 1
-        ApplyRotation: 1
+        ApplyRotation: 0
         ApplyScale: 0
         ForceSimulationSpeed: 0
         ForcedSimulationSpeed: {x: 0.1, y: 1}
@@ -1171,10 +1171,10 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 4127340155295762168}
         DebugActive: 0
-        Mode: 0
-        ObjectPoolSize: 5
+        Mode: 2
+        ObjectPoolSize: 20
         MutualizePools: 0
-        ParentTransform: {fileID: 0}
+        ParentTransform: {fileID: 163005695394561778}
         CachedRecycle: 1
         ParticlesPrefab: {fileID: 6498568000327061605, guid: 102ac58d070a8b8409ed371332a69be3,
           type: 3}
@@ -1187,7 +1187,7 @@ MonoBehaviour:
         TargetWorldPosition: {x: 0, y: 0, z: 0}
         Offset: {x: 0, y: 0, z: 0}
         NestParticles: 1
-        ApplyRotation: 1
+        ApplyRotation: 0
         ApplyScale: 0
         ForceSimulationSpeed: 0
         ForcedSimulationSpeed: {x: 0.1, y: 1}
@@ -1893,10 +1893,10 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 532736404377657852}
         DebugActive: 0
-        Mode: 0
-        ObjectPoolSize: 5
+        Mode: 2
+        ObjectPoolSize: 20
         MutualizePools: 0
-        ParentTransform: {fileID: 0}
+        ParentTransform: {fileID: 915815717931694077}
         CachedRecycle: 1
         ParticlesPrefab: {fileID: 6498568000327061605, guid: 102ac58d070a8b8409ed371332a69be3,
           type: 3}
@@ -1909,7 +1909,7 @@ MonoBehaviour:
         TargetWorldPosition: {x: 0, y: 0, z: 0}
         Offset: {x: 0, y: 0, z: 0}
         NestParticles: 1
-        ApplyRotation: 1
+        ApplyRotation: 0
         ApplyScale: 0
         ForceSimulationSpeed: 0
         ForcedSimulationSpeed: {x: 0.1, y: 1}

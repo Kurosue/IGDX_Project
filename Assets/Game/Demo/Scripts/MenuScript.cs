@@ -10,6 +10,7 @@ public class MenuScript : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Level1");
+        Debug.Log("Button pressed.");
     }
 
     // Update is called once per frame

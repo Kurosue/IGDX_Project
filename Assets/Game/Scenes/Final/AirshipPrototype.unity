@@ -344,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AutoAttributePlayerIDs: 1
   PlayerPrefabs:
-  - {fileID: 1239692079788639831, guid: adc42afe9d543d642a5d64d2ba247615, type: 3}
+  - {fileID: 4205121050928148874, guid: 967f8e0146a64b64683709a8f98f97b9, type: 3}
   SceneCharacters: []
   InitialSpawnPoint: {fileID: 1618121293}
   CurrentCheckpoint: {fileID: 0}
@@ -1008,9 +1008,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994b9666517361241bd21167d85fea94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childPrefab: {fileID: 1030627280904435808, guid: b6e9a1e1d7d7d1a4f8ed8709a8782aeb,
-    type: 3}
-  dialogueDatabase: {fileID: 11400000, guid: b56b0c50a50b6124ba8d10417631b6eb, type: 2}
 --- !u!1 &641353195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,20 +2165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bca68fb18fbc3e428abe35e0d1f69c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterDimension: 0
-  CharacterType: 1
-  PlayerID: 
-  CharacterAnimator: {fileID: 0}
-  UseDefaultMecanim: 1
-  RunAnimatorSanityChecks: 0
-  DisableAnimatorLogs: 1
-  CharacterModel: {fileID: 0}
-  CharacterHealth: {fileID: 0}
-  SendStateChangeEvents: 1
-  AdditionalAbilityNodes: []
-  CharacterBrain: {fileID: 0}
-  OptimizeForMobile: 1
-  ID: 2
 --- !u!1 &1490312919
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,20 +3288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bca68fb18fbc3e428abe35e0d1f69c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterDimension: 0
-  CharacterType: 1
-  PlayerID: 
-  CharacterAnimator: {fileID: 0}
-  UseDefaultMecanim: 1
-  RunAnimatorSanityChecks: 0
-  DisableAnimatorLogs: 1
-  CharacterModel: {fileID: 0}
-  CharacterHealth: {fileID: 0}
-  SendStateChangeEvents: 1
-  AdditionalAbilityNodes: []
-  CharacterBrain: {fileID: 0}
-  OptimizeForMobile: 1
-  ID: 1
 --- !u!1 &1918232350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,23 +3414,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4195150596186120, guid: 9edcf7e494cf3e640b18cb7495fb179a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.21
+      value: -9.923677
       objectReference: {fileID: 0}
     - target: {fileID: 4195150596186120, guid: 9edcf7e494cf3e640b18cb7495fb179a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.02
+      value: 12.338434
       objectReference: {fileID: 0}
     - target: {fileID: 4195150596186120, guid: 9edcf7e494cf3e640b18cb7495fb179a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -60.17
+      value: -35.261963
       objectReference: {fileID: 0}
     - target: {fileID: 4195150596186120, guid: 9edcf7e494cf3e640b18cb7495fb179a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.97117317
+      value: 0.9544937
       objectReference: {fileID: 0}
     - target: {fileID: 4195150596186120, guid: 9edcf7e494cf3e640b18cb7495fb179a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23837522
+      value: 0.2982311
       objectReference: {fileID: 0}
     - target: {fileID: 4195150596186120, guid: 9edcf7e494cf3e640b18cb7495fb179a, type: 3}
       propertyPath: m_LocalRotation.y

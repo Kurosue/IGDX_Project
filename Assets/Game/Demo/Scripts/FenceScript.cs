@@ -20,8 +20,7 @@ public class FenceScript : MonoBehaviour
     }
     
     void Update()
-    {
-        
+    {   
         if (isLerping)
         {
             elapsedTime += Time.deltaTime;
@@ -48,5 +47,10 @@ public class FenceScript : MonoBehaviour
     void EnemyKilled()
     {
         EnemiesLeft -= 1;
+        Debug.Log("Musuh berkurang 1");
+
+        if (EnemiesLeft == 0) {
+            StartLerp();
+        }
     }
 }
