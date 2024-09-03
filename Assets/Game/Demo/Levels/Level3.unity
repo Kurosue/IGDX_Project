@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AutoAttributePlayerIDs: 1
   PlayerPrefabs:
-  - {fileID: 4205121050928148874, guid: 967f8e0146a64b64683709a8f98f97b9, type: 3}
+  - {fileID: 1392792025926758555, guid: 47dc2e33b15e63a4fbb1176db6e2c57e, type: 3}
   SceneCharacters: []
   InitialSpawnPoint: {fileID: 1618121293}
   CurrentCheckpoint: {fileID: 0}

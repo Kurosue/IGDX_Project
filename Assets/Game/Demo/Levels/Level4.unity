@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AutoAttributePlayerIDs: 1
   PlayerPrefabs:
-  - {fileID: 4205121050928148874, guid: 967f8e0146a64b64683709a8f98f97b9, type: 3}
+  - {fileID: 1392792025926758555, guid: 47dc2e33b15e63a4fbb1176db6e2c57e, type: 3}
   SceneCharacters: []
   InitialSpawnPoint: {fileID: 1618121293}
   CurrentCheckpoint: {fileID: 0}
@@ -285,7 +285,6 @@ Transform:
   - {fileID: 1068783320}
   - {fileID: 678297979}
   - {fileID: 1976696081}
-  - {fileID: 531206883}
   - {fileID: 789066319}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -393,7 +392,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 139856175}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2359864457655761758, guid: a8675831fcf111c41b9bada9d65838fb,
         type: 3}
@@ -455,12 +454,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8675831fcf111c41b9bada9d65838fb, type: 3}
---- !u!4 &531206883 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2359864457655761758, guid: a8675831fcf111c41b9bada9d65838fb,
-    type: 3}
-  m_PrefabInstance: {fileID: 531206882}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &598334956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,3 +2352,4 @@ SceneRoots:
   - {fileID: 1734572837}
   - {fileID: 1918232351}
   - {fileID: 139856175}
+  - {fileID: 531206882}
