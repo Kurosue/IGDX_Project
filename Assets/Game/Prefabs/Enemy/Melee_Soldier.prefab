@@ -103,7 +103,8 @@ MonoBehaviour:
   UseDefaultMecanim: 1
   RunAnimatorSanityChecks: 0
   DisableAnimatorLogs: 1
-  CharacterModel: {fileID: 2592315520668969124}
+  CharacterModel: {fileID: 2643375454862687856, guid: a9605eb4d0d314548a88e6a89be5e659,
+    type: 3}
   CharacterHealth: {fileID: 520375011705382772}
   SendStateChangeEvents: 1
   AdditionalAbilityNodes: []
@@ -128,7 +129,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 0.7
+  m_Height: 1.46
   m_Radius: 0.26
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -956,6 +957,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 6709717569329227527, guid: 19729253e5aba3c48b385aefce87dd6d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adb5f3c73513cd947af184733a494381, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -964,12 +970,6 @@ PrefabInstance:
 --- !u!4 &1642631405247566107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1269217180030437327, guid: 19729253e5aba3c48b385aefce87dd6d,
-    type: 3}
-  m_PrefabInstance: {fileID: 528863734276757204}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2592315520668969124 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2643375454862687856, guid: 19729253e5aba3c48b385aefce87dd6d,
     type: 3}
   m_PrefabInstance: {fileID: 528863734276757204}
   m_PrefabAsset: {fileID: 0}
