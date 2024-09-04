@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5029494655470830852
+--- !u!1 &3522782404336875992
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7254972626633135432}
-  - component: {fileID: 9122099813708965633}
-  - component: {fileID: 847297491880897649}
-  - component: {fileID: 6426494264287704560}
-  - component: {fileID: 2827297132060751429}
+  - component: {fileID: 5311560874744756913}
+  - component: {fileID: 7904293985354593751}
+  - component: {fileID: 5133711840640692828}
+  - component: {fileID: 5784724730620416044}
+  - component: {fileID: 6295087034888594667}
   m_Layer: 0
-  m_Name: Spear Dummy
+  m_Name: SpearModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7254972626633135432
+--- !u!4 &5311560874744756913
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5029494655470830852}
+  m_GameObject: {fileID: 3522782404336875992}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0083949305, y: 0.12000001, z: 0.08815855}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0.072, y: 0.005, z: 0}
+  m_LocalScale: {x: 0.14572282, y: 0.14572282, z: 0.14572282}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3405823948474533293}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
---- !u!33 &9122099813708965633
+--- !u!33 &7904293985354593751
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5029494655470830852}
+  m_GameObject: {fileID: 3522782404336875992}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &847297491880897649
+--- !u!23 &5133711840640692828
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5029494655470830852}
+  m_GameObject: {fileID: 3522782404336875992}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f7b8a8f4dc3f65c44b96a2736a3f4ec3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6426494264287704560
+--- !u!64 &5784724730620416044
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5029494655470830852}
+  m_GameObject: {fileID: 3522782404336875992}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -107,14 +107,14 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &2827297132060751429
+--- !u!95 &6295087034888594667
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5029494655470830852}
+  m_GameObject: {fileID: 3522782404336875992}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8971dae34f1655c47aec81c4defcb9d4, type: 2}
@@ -159,7 +159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7254972626633135432}
+  - {fileID: 5311560874744756913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &162322256501480332
@@ -209,7 +209,7 @@ MonoBehaviour:
   PreventAllAimWhileInUse: 0
   RecoilForce: 0
   Animators:
-  - {fileID: 2827297132060751429}
+  - {fileID: 0}
   PerformAnimatorSanityChecks: 0
   MirrorCharacterAnimatorParameters: 0
   WeaponAnimationID: 0
