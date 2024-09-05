@@ -22,6 +22,7 @@ public class FenceScript : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
+        audioSource.volume = 4f;
     }
     
     void Update()
