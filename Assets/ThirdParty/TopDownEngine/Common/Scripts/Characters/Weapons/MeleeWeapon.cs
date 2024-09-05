@@ -105,6 +105,19 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public override void Initialization()
 		{
+			if (Animators.Count == 0)
+			{
+				Animator parentAnimator = GetComponentInParent<Animator>();
+				if (parentAnimator == null)
+				{
+					Debug.Log("Null");
+				}
+				else
+				{
+					Debug.Log("Succes2");
+					Animators.Add(parentAnimator);
+				}
+			}
 			base.Initialization();
 
 			if (_damageArea == null)
