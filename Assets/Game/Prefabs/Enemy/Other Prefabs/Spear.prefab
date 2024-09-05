@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 2436912977878927611}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3327, y: -0.1435, z: -0.0414}
-  m_LocalScale: {x: 0.78382415, y: 1.9062815, z: 1.652207}
+  m_LocalPosition: {x: 0, y: 0, z: 1.12}
+  m_LocalScale: {x: 1.4348986, y: 1.9062815, z: 1.0486025}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3405823948474533293}
@@ -84,7 +84,7 @@ MonoBehaviour:
   MaxDamageCaused: 10
   TypedDamages: []
   DamageDirectionMode: 1
-  DamageCausedKnockbackType: 1
+  DamageCausedKnockbackType: 0
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 10, y: 10, z: 10}
   InvincibilityDuration: 0.5
@@ -254,8 +254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AimControl: 4
   AimControlActive: 1
-  RotationMode: 3
-  WeaponRotationSpeed: 4.7
+  RotationMode: 0
+  WeaponRotationSpeed: 6.58
   MinimumAngle: -180
   MaximumAngle: 180
   MinimumMagnitude: 0.2
