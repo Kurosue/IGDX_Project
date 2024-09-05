@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 5849399310996084305}
   - component: {fileID: 4258343514834513320}
   - component: {fileID: 5599151786745224603}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Ammo Prefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,8 +144,8 @@ MonoBehaviour:
   FaceDirection: 1
   FaceMovement: 0
   MovementVector: 0
-  Speed: 50
-  Acceleration: 2
+  Speed: 104.1
+  Acceleration: 8.7
   Direction: {x: -1, y: 0, z: 0}
   DirectionCanBeChangedBySpawner: 1
   FlipValue: {x: -1, y: 1, z: 1}
@@ -167,7 +167,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -196,7 +196,7 @@ MonoBehaviour:
   MaxDamageCaused: 10
   TypedDamages: []
   DamageDirectionMode: 1
-  DamageCausedKnockbackType: 1
+  DamageCausedKnockbackType: 0
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 10, y: 10, z: 10}
   InvincibilityDuration: 0.5
@@ -315,4 +315,4 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 5
+  LifeTime: 3

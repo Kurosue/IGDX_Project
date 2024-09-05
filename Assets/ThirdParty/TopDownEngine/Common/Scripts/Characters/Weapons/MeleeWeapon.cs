@@ -110,15 +110,7 @@ namespace MoreMountains.TopDownEngine
 				if(Animators[0] == null)
 				{
 					Animator parentAnimator = GetComponentInParent<Animator>();
-					if (parentAnimator == null)
-					{
-						Debug.Log("Null");
-					}
-					else
-					{
-						Debug.Log("Succes2");
-						Animators[0] = parentAnimator;
-					}
+					Animators[0] = parentAnimator;
 				}
 			}
 			base.Initialization();
