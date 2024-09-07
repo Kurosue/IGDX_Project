@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 162322256501480332}
   - component: {fileID: 2177944072520672816}
   m_Layer: 0
-  m_Name: Spear
+  m_Name: F_Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   HitDamageableFeedback: {fileID: 0}
   HitNonDamageableFeedback: {fileID: 0}
   ExistingDamageArea: {fileID: 4991251035511519255}
-  InitialDelay: 2
+  InitialDelay: 0.5
   ActiveDuration: 1
   TargetLayerMask:
     serializedVersion: 2
