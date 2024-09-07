@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 9019733189248418627}
   - component: {fileID: 127589300765709734}
   - component: {fileID: 2075634296349639844}
+  - component: {fileID: -4985193202992755878}
   m_Layer: 13
   m_Name: Ranged_Soldier 1
   m_TagString: Untagged
@@ -457,7 +458,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 6576099635985958236, guid: 66b04c2863ce5b8409bca7d6b50560b4,
+  InitialWeapon: {fileID: 6576099635985958236, guid: e12cac3bd02d76544bab70ca733671fc,
     type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
@@ -803,6 +804,41 @@ MonoBehaviour:
   TestMaxHealth: 100
   TestCurrentHealth: 25
   TestUpdateHealthButton: 0
+--- !u!114 &-4985193202992755878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658817600210407239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3b7ab2b51f5c2419cc72bff008ff0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BlockingWeaponStates: 
+  FacingMode: 2
+  FacingBase: 0
+  ModelShouldFlip: 1
+  ModelFlipValueLeft: {x: -1, y: 1, z: 1}
+  ModelFlipValueRight: {x: 1, y: 1, z: 1}
+  ModelShouldRotate: 0
+  ModelRotationValueLeft: {x: 0, y: 180, z: 0}
+  ModelRotationValueRight: {x: 0, y: 0, z: 0}
+  ModelRotationSpeed: 0
+  InitialFacingDirection: 1
+  AbsoluteThresholdMovement: 0.5
+  AbsoluteThresholdWeapon: 0.5
+  CurrentFacingDirection: 1
+  IsFacingRight: 1
 --- !u!1 &2173365941901481033
 GameObject:
   m_ObjectHideFlags: 0
