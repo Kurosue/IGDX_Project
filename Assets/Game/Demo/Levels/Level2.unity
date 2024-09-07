@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 250
-  m_AmbientSkyColor: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
+  m_AmbientSkyColor: {r: 0.101960786, g: 0.18039216, b: 0.34509805, a: 1}
   m_AmbientEquatorColor: {r: 0.3455882, g: 0.20206045, b: 0.04828071, a: 1}
   m_AmbientGroundColor: {r: 0.5, g: 0.3480393, b: 0.04411766, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: c0c1e7878b75b2e41b8ad446fd10899e, type: 2}
   m_HaloStrength: 0.308
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 025d717bffd7add4eb2995cfda97a736,
+  m_LightingDataAsset: {fileID: 112000000, guid: cea8406a9eed2d44d8fc98c56dd6e031,
     type: 2}
   m_LightingSettings: {fileID: 251508782}
 --- !u!196 &5
@@ -526,6 +526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 8397554591588558133, guid: a8675831fcf111c41b9bada9d65838fb,
+        type: 3}
+      propertyPath: DrawGizmo
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -594,11 +599,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1671803900351959701, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 389840077059145391, guid: 962edc7b4ad2c6342b89ea208f554aa5,
+        type: 3}
+    - target: {fileID: 3483435422004142425, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 1658817600210407239, guid: 7680b82cc5210584ab9b9abff644085a,
+        type: 3}
     - target: {fileID: 6000138192373489871, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
         type: 3}
       propertyPath: m_Name
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 7466051175668394821, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 389840077059145391, guid: 962edc7b4ad2c6342b89ea208f554aa5,
+        type: 3}
+    - target: {fileID: 8167657777450806077, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 1658817600210407239, guid: 7680b82cc5210584ab9b9abff644085a,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

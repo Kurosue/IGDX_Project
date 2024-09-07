@@ -2204,16 +2204,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1671803900351959701, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 389840077059145391, guid: 962edc7b4ad2c6342b89ea208f554aa5,
+        type: 3}
+    - target: {fileID: 3483435422004142425, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 389840077059145391, guid: a1891c3691a5e2b4a8c1bbfa0c0e438e,
+        type: 3}
     - target: {fileID: 6000138192373489871, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
         type: 3}
       propertyPath: m_Name
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 7466051175668394821, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 389840077059145391, guid: 962edc7b4ad2c6342b89ea208f554aa5,
+        type: 3}
     - target: {fileID: 7500975253663360643, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
         type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1614580772}
+    - target: {fileID: 8167657777450806077, guid: dee5e68e8857aed4a8b03c8c6b67f81c,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 389840077059145391, guid: 624afe047d0d2e343a86d00c02a84ef8,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

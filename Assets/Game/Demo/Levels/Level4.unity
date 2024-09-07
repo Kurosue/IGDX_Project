@@ -449,6 +449,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 8397554591588558133, guid: a8675831fcf111c41b9bada9d65838fb,
+        type: 3}
+      propertyPath: DrawGizmo
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1396,7 +1401,7 @@ Transform:
   m_GameObject: {fileID: 1396347748}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23837239, y: -0, z: -0, w: 0.9711738}
-  m_LocalPosition: {x: 7.42, y: -0.56, z: -4.28}
+  m_LocalPosition: {x: 7.11, y: 0.1, z: -5.98}
   m_LocalScale: {x: 0.9179725, y: 0.9179725, z: 0.9179725}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2285,7 +2290,7 @@ Transform:
   m_GameObject: {fileID: 2106295548}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23837239, y: -0, z: -0, w: 0.9711738}
-  m_LocalPosition: {x: 5.97, y: 0.64, z: -3.96}
+  m_LocalPosition: {x: 5.97, y: 0.73, z: -3.96}
   m_LocalScale: {x: 0.9179725, y: 0.9179725, z: 0.9179725}
   m_ConstrainProportionsScale: 0
   m_Children: []
