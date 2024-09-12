@@ -212,7 +212,7 @@ MonoBehaviour:
   RespawnDelay: 2
   DelayBeforeDeathScreen: 1
   UseLevelBounds: 0
-  LoadingSceneMode: 0
+  LoadingSceneMode: 2
   LoadingSceneName: LoadingScreen
   AdditiveLoadingSettings:
     LoadingSceneName: MMAdditiveLoadingScreen
@@ -626,7 +626,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyToSpawn
       value: 
-      objectReference: {fileID: 1658817600210407239, guid: 7680b82cc5210584ab9b9abff644085a,
+      objectReference: {fileID: 389840077059145391, guid: a1891c3691a5e2b4a8c1bbfa0c0e438e,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

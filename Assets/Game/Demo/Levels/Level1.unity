@@ -1327,7 +1327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 317, y: -60.998055}
+  m_AnchoredPosition: {x: 317, y: -60.998047}
   m_SizeDelta: {x: 732, y: -393.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609754737
@@ -1879,7 +1879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1630, y: -60.998055}
+  m_AnchoredPosition: {x: 1630, y: -60.998047}
   m_SizeDelta: {x: 732, y: -393.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888309640
@@ -2286,7 +2286,7 @@ PrefabInstance:
     - target: {fileID: 114558768747739852, guid: 9edcf7e494cf3e640b18cb7495fb179a,
         type: 3}
       propertyPath: m_Text
-      value: Mission Failed
+      value: You have been slain
       objectReference: {fileID: 0}
     - target: {fileID: 114558768747739852, guid: 9edcf7e494cf3e640b18cb7495fb179a,
         type: 3}
@@ -2446,8 +2446,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224317789485975406, guid: 9edcf7e494cf3e640b18cb7495fb179a,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 867.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 224317789485975406, guid: 9edcf7e494cf3e640b18cb7495fb179a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 180.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 224317789485975406, guid: 9edcf7e494cf3e640b18cb7495fb179a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 365.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 224317789485975406, guid: 9edcf7e494cf3e640b18cb7495fb179a,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 546
+      value: 508
       objectReference: {fileID: 0}
     - target: {fileID: 224378024401731240, guid: 9edcf7e494cf3e640b18cb7495fb179a,
         type: 3}
@@ -2462,7 +2477,7 @@ PrefabInstance:
     - target: {fileID: 224378024401731240, guid: 9edcf7e494cf3e640b18cb7495fb179a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 48.001976
+      value: 48.001984
       objectReference: {fileID: 0}
     - target: {fileID: 224429692818469760, guid: 9edcf7e494cf3e640b18cb7495fb179a,
         type: 3}
