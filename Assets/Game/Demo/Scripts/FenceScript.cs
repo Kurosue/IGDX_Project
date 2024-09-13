@@ -13,11 +13,24 @@ public class FenceScript : MonoBehaviour
     public AudioSource audioSource;
     private int EnemiesLeft;
     private float elapsedTime = 0f;
+    private GameObject parentObject;
 
     void Start()
     {
-        EnemiesLeft = 4;
+        parentObject = GameObject.Find("SpawnPoints");
+        
+        if (parentObject != null)
+        {
+            EnemiesLeft = parentObject.transform.childCount;
+            Debug.Log("Jumlah musuh di scene ini:" + EnemiesLeft);
+        }
+        else
+        {
+            Debug.LogError("GameObject bernama 'SpawnPoints' tidak ditemukan!");
+        }
+
         Enemy.OnEnemyKilled += EnemyKilled;
+        
         if (audioSource == null)
         {
             audioSource = GetComponent<AudioSource>();
