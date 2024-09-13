@@ -108,7 +108,7 @@ namespace MoreMountains.TopDownEngine
 			if (Animators.Count == 1)
 			{
 				if(Animators[0] == null)
-				{
+				{ 
 					Animator parentAnimator = GetComponentInParent<Animator>();
 					Animators[0] = parentAnimator;
 				}
