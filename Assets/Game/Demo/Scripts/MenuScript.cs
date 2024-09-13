@@ -13,6 +13,11 @@ public class MenuScript : MonoBehaviour
         Debug.Log("Button pressed.");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     // Update is called once per frame
     public void ExitGame()
     {
