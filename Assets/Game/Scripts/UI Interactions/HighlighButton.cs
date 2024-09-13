@@ -7,38 +7,36 @@ using UnityEngine.EventSystems;
 
 public class HighlighButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public UnityEngine.Color normalColor = UnityEngine.Color.white;
+ public UnityEngine.Color normalColor = UnityEngine.Color.white;
     public UnityEngine.Color highlightColor = UnityEngine.Color.yellow;
     private Text buttonText;
+    private bool isPointerOver = false;  // Flag untuk melacak status pointer
 
-void Start()
+    void Start()
     {
-        // Cari komponen Text di dalam button (termasuk di dalam container)
         buttonText = GetComponentInChildren<Text>();
 
         if (buttonText != null)
         {
-            buttonText.color = normalColor; // Set warna teks awal
-        }
-        else
-        {
-            Debug.LogError("Komponen Text tidak ditemukan di dalam Button.");
+            buttonText.color = normalColor;  // Set warna awal
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (buttonText != null)
+        if (buttonText != null && !isPointerOver)
         {
-            buttonText.color = highlightColor; // Ubah warna saat hover
+            buttonText.color = highlightColor;  // Ubah warna saat hover
+            isPointerOver = true;  // Tandai bahwa pointer berada di atas tombol
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (buttonText != null)
+        if (buttonText != null && isPointerOver)
         {
-            buttonText.color = normalColor; // Kembalikan ke warna awal
+            buttonText.color = normalColor;  // Kembalikan warna ke normal saat pointer keluar
+            isPointerOver = false;  // Tandai bahwa pointer sudah keluar
         }
     }
 }
