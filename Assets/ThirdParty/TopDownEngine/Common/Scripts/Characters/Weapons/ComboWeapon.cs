@@ -26,7 +26,6 @@ namespace MoreMountains.TopDownEngine
 
 		[Header("Debug")]
 		/// the list of weapons, set automatically by the class
-		[MMReadOnly]
 		[Tooltip("the list of weapons, set automatically by the class")]
 		public Weapon[] Weapons;
 		/// the reference to the weapon's Owner

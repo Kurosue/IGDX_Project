@@ -8,10 +8,12 @@ public class SpawnEnemy : MonoBehaviour
 
     void OnEnable() {
         DangerArea.OnAreaEntered += SpawnEnemyMethod;
+        BossLogic.EnemySpawner += SpawnEnemyMethod;
     }
 
     void OnDisable() {
         DangerArea.OnAreaEntered -= SpawnEnemyMethod;
+        BossLogic.EnemySpawner -= SpawnEnemyMethod;
     }
 
     void SpawnEnemyMethod() {

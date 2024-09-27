@@ -9,10 +9,15 @@ public class Spawner : MonoBehaviour
     void OnEnable()
     {
         EndlessGameManager.NewWave += SpawnEnemy;
+        DangerArea.OnAreaEntered += SpawnEnemy;
+        BossLogic.EnemySpawner += SpawnEnemy;
+
     }
     void OnDisable()
     {
         EndlessGameManager.NewWave -= SpawnEnemy;
+        DangerArea.OnAreaEntered -= SpawnEnemy;
+        BossLogic.EnemySpawner -= SpawnEnemy;
     }
 
     void SpawnEnemy()
